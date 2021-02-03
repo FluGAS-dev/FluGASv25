@@ -22,19 +22,21 @@ FluGAS ver2.5 ƒŠƒŠ[ƒX”Å‚Å‚·B
 
 GISAID‚ª’ñ‹Ÿ‚µ‚Ä‚¢‚é“o˜^—pƒ}ƒNƒ‚ðŠÜ‚ÞƒGƒNƒZƒ‹ƒtƒ@ƒCƒ‹‚ð“¯«‚µ‚Ä‚¨‚èA‰ðÍŒ‹‰Ê‚ÌƒRƒ“ƒZƒ“ƒTƒX‰–Šî”z—ñ‚ðƒGƒNƒZƒ‹ƒtƒ@ƒCƒ‹‚É”½‰f‚·‚é‹@”\‚ª‚ ‚è‚Ü‚·
 
-i‚»‚Ì‚Ù‚©‚Ì•K—vŽ–€‚Í‰ðÍŽÒ‚ªƒ““ü—Í‚·‚é•K—v‚ª‚ ‚è‚Ü‚·jB
+i‚»‚Ì‚Ù‚©‚Ì•K—vŽ–€‚Í‰ðÍŽÒ‚ª“ü—Í‚·‚é•K—v‚ª‚ ‚è‚Ü‚·jB
 
+  
 
-
-
+  
 
 #### Žg‚¢•ûB
 
 ƒ_ƒEƒ“ƒ[ƒhƒy[ƒW‚ÌmDownloadnƒ{ƒ^ƒ“‚©‚çZipƒtƒ@ƒCƒ‹‚ðƒ_ƒEƒ“ƒ[ƒh‚µ‚Ü‚·B
 
-https://github.com/FluGAS-dev/FluGASv25/blob/main/FluGAS.zip@i145MBj
+https://github.com/FluGAS-dev/FluGASv25/blob/main/FluGAS.zip
 
+i145MBj
 
+  
 
 Zipƒtƒ@ƒCƒ‹‚ð‰ð“€‚·‚é‚Æƒ}ƒjƒ…ƒAƒ‹‚ÆƒCƒ“ƒXƒg[ƒ‰i*FluGASv2setup.exe*j‚ªŠÜ‚Ü‚ê‚Ä‚¢‚Ü‚·BƒCƒ“ƒXƒg[ƒ‰‚ðŽÀs‚·‚é‚ÆƒCƒ“ƒXƒg[ƒ‹‚ªŽn‚Ü‚è‚Ü‚·BƒCƒ“ƒXƒg[ƒ‹æ‚É“ú–{Œê‚âƒXƒy[ƒX‚ðŠÜ‚Ü‚È‚¢ƒfƒBƒŒƒNƒgƒŠ‚ðŽw’è‚µ‚Ü‚·B
 
@@ -60,7 +62,9 @@ https://dotnet.microsoft.com/download/dotnet-core/3.1
 
 https://dotnet.microsoft.com/download/dotnet-core/thank-you/runtime-desktop-3.1.11-windows-x64-installer
 
+  
 
+  
 
 #### —pˆÓ‚·‚é‚à‚ÌB
 
@@ -68,7 +72,9 @@ Illumina ‚‘¬ƒV[ƒPƒ“ƒTiMiseqAHiSeq ‚È‚ÇjANanopre iMinIONAGridION‚È‚Çj‚Åƒ
 
 iNanopore Fast5 ƒtƒ@ƒCƒ‹‚Ìê‡A•Ê“rNanoporeŽÐ‚ª’ñ‹Ÿ‚·‚éGuppy‚ª•K—vj
 
+  
 
+  
 
 #### ‰ðÍƒtƒ[B
 
@@ -86,17 +92,19 @@ Illumina ‚‘¬ƒV[ƒPƒ“ƒTiMiseqAHiSeq ‚È‚ÇjANanopre iMinIONAGridION‚È‚Çj‚Åƒ
 
 **¦ •ÏˆÙŒŸo‚ð”½‰f‚³‚¹‚½ƒRƒ“ƒZƒ“ƒTƒX‰–Šî”z—ñì¬i2‰ñ–Új**
 
+  
 
+  
 
 #### “Á’¥B
 
-‘½‚­‚ÌƒŠƒtƒ@ƒŒƒ“ƒX”z—ñ‚Éƒ}ƒbƒsƒ“ƒO‚ðs‚¤ê‡AƒŠ[ƒh‚ª“Ž—‚µ‚½‰–Šî”z—ñ‚ðŠÜ‚Þ•¡”‚ÌƒŠƒtƒ@ƒŒƒ“ƒX‚Éƒ}ƒbƒsƒ“ƒO‚³‚ê‚éB
+‘½‚­‚ÌƒŠƒtƒ@ƒŒƒ“ƒX”z—ñ‚Éƒ}ƒbƒsƒ“ƒO‚ðs‚¤ê‡AƒŠ[ƒh‚ª“Ž—‚µ‚½‰–Šî”z—ñ‚ðŠÜ‚Þ•¡”‚ÌƒŠƒtƒ@ƒŒƒ“ƒX‚Éƒ}ƒbƒsƒ“ƒO‚³‚ê‚Ü‚·B
 
-ƒ}ƒbƒsƒ“ƒOƒc[ƒ‹‚Ì‚ä‚ç‚¬‚É‚æ‚è•Î‚Á‚½ƒ}ƒbƒsƒ“ƒOŒ‹‰Ê‚É‚È‚é‚±‚Æ‚ð‰ñ”ð‚·‚é‚½‚ßAƒ}ƒbƒsƒ“ƒOŒ‹‰Ê‚©‚çì¬‚µ‚½ƒRƒ“ƒZƒ“ƒTƒX”z—ñ‚ðABLASTŒ‹‰Ê‚ÌƒŠƒtƒ@ƒŒƒ“ƒX‚É‘Î‚µ‚·‚×‚Ä‚ÌƒŠ[ƒh‚ðŒÂ•Êƒ}ƒbƒsƒ“ƒO‚ðs‚¤‚±‚Æ‚É‚æ‚èAƒc[ƒ‹‚É‚æ‚é‚ä‚ç‚¬‚ð‰ðÁ‚·‚é‚±‚Æ‚ð–Ú“I‚Éƒtƒ[‚ðì¬‚µ‚½B
+ƒ}ƒbƒsƒ“ƒOƒc[ƒ‹‚Ì‚ä‚ç‚¬‚É‚æ‚è•Î‚Á‚½ƒ}ƒbƒsƒ“ƒOŒ‹‰Ê‚É‚È‚é‚±‚Æ‚ð‰ñ”ð‚·‚é‚½‚ßAƒ}ƒbƒsƒ“ƒOŒ‹‰Ê‚©‚çì¬‚µ‚½ƒRƒ“ƒZƒ“ƒTƒX”z—ñ‚ðABLASTŒ‹‰Ê‚ÌƒŠƒtƒ@ƒŒƒ“ƒX‚É‘Î‚µ‚·‚×‚Ä‚ÌƒŠ[ƒh‚ðŒÂ•Êƒ}ƒbƒsƒ“ƒO‚ðs‚¤‚±‚Æ‚É‚æ‚èAƒc[ƒ‹‚É‚æ‚é‚ä‚ç‚¬‚ð‰ðÁ‚·‚é‚±‚Æ‚ð–Ú“I‚Éƒtƒ[‚ðì¬‚µ‚Ü‚µ‚½B
 
-ŒÂ•Ê‚ÉƒRƒ}ƒ“ƒh‚ðŽÀs‚·‚é‚ÆAŒÂX‚ÌƒRƒ}ƒ“ƒhŒ‹‰Ê‚ð‘Ò‚¿ŽŸ‚ÌƒRƒ}ƒ“ƒh‚ðŽÀs‚·‚é‚±‚Æ‚É‚È‚èA‚³‚ç‚ÉŠe•ªß•Ê‚ðs‚¤‚½‚ßŽžŠÔ‚ð—v‚·‚é‚±‚Æ‚ð‰ðÁ‚·‚éB
+ŒÂ•Ê‚ÉƒRƒ}ƒ“ƒh‚ðŽÀs‚·‚é‚ÆAŒÂX‚ÌƒRƒ}ƒ“ƒhŒ‹‰Ê‚ð‘Ò‚¿ŽŸ‚ÌƒRƒ}ƒ“ƒh‚ðŽÀs‚·‚é‚±‚Æ‚É‚È‚èA‚³‚ç‚ÉŠe•ªß•Ê‚ðs‚¤‚½‚ßŽžŠÔ‚ð—v‚·‚é‚±‚Æ‚ð‰ðÁ‚µ‚Ü‚·B
 
-ƒf[ƒ^‚ÌŽw’è‚Æƒ{ƒ^ƒ“1‚Â‚ÅŽÀs‚ª‰Â”\‚È‚½‚ßAŒ¤‹†ŽÒEŽÀŒ±ŽÒˆÈŠO‚ÌƒIƒyƒŒ[ƒ^‚ªŽÀs‰Â”\‚Æ‚È‚éB
+ƒf[ƒ^‚ÌŽw’è‚Æƒ{ƒ^ƒ“1‚Â‚ÅŽÀs‚ª‰Â”\‚È‚½‚ßAŒ¤‹†ŽÒEŽÀŒ±ŽÒˆÈŠO‚ÌƒIƒyƒŒ[ƒ^‚ªŽÀs‰Â”\‚Æ‚È‚è‚Ü‚·B
 
 
 
