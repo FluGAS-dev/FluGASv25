@@ -1,0 +1,42 @@
+﻿DROP TABLE IF EXISTS MinionParameters;
+CREATE TABLE MinionParameters (
+Id                               INTEGER        PRIMARY KEY AUTOINCREMENT NOT NULL,
+Name                             VARCHAR(255)   NOT NULL                 ,
+Note                             VARCHAR(255)                             ,
+CreateDate                       DATE           DEFAULT CURRENT_TIMESTAMP,
+
+IsAnalysisTop3                   bool           DEFAULT TRUE    ,
+IsFastQC                         BOOL           DEFAULT FALSE            ,
+FastQCMinPhredScore              INTEGER        DEFAULT 13               ,
+FastQCWindowSize                 INTEGER        DEFAULT 50               ,
+FastQCMinLength                  INTEGER        DEFAULT 120              ,
+CnsMinCoverage                   INTEGER        DEFAULT 3                ,
+CnsVariantMinFrequency        FLOAT          DEFAULT 0.35             ,
+CnsHomoFrequency              FLOAT          DEFAULT 0.7             ,
+CnsInsDelFrequency         FLOAT          DEFAULT 0.51             ,
+CnsIncludeNRatio                 INTEGER        DEFAULT 30               ,
+BlastEvalueCutoff                FLOAT          DEFAULT 0.001            ,
+BlastResultCutoff                INTEGER        DEFAULT 5                ,
+ReferenceSelectBlastElement     VARCHAR(255)    DEFAULT ''               ,
+ReferenceSelectBlastEvalue       FLOAT          DEFAULT 0.001            ,
+IsReferenceSelectBlastEvalue     BOOL           DEFAULT FALSE             ,
+ReferenceSelectBlastIdentical    FLOAT          DEFAULT 90.9             ,
+IsReferenceSelectBlastIdentical  BOOL           DEFAULT FALSE            ,
+ReferenceSelectBlastScore        INTEGER        DEFAULT 120              ,
+IsReferenceSelectBlastScore      BOOL           DEFAULT FALSE            ,
+ReferenceSelectBlastLength       INTEGER        DEFAULT 120              ,
+IsReferenceSelectBlastLength     BOOL           DEFAULT FALSE            ,
+IsLessThanNone1st                    BOOL           DEFAULT FALSE            ,
+IsLessThanNone2nd                   BOOL           DEFAULT TRUE            ,
+IsGuppyAlign                             BOOL           DEFAULT FALSE            ,
+IsMinimap2                               BOOL           DEFAULT FALSE             ,
+GuppyMinCover                        VARCHAR(255)   DEFAULT '0.6'            ,
+Minimap2KmerSize                   VARCHAR(255)   DEFAULT '15'             ,
+Minimap2MinWindowSize           VARCHAR(255)   DEFAULT '10'             ,
+Minimap2MatchingScore            VARCHAR(255)   DEFAULT '2'              ,
+Minimap2MismachPenalty          VARCHAR(255)   DEFAULT '4'              ,
+Minimap2GapOpenPenalty          VARCHAR(255)   DEFAULT '4,24'           ,
+Minimap2GapExtentionPenalty    VARCHAR(255)   DEFAULT '2,1'              
+
+);
+

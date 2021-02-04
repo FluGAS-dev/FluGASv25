@@ -1,0 +1,63 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="FluGASv25.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="select_dir" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="save_dir" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ont_path" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="minion_param" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="miseq_param" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="mapping_reference" Type="System.String" Scope="User">
+      <Value Profile="(Default)">references\MappingReference</Value>
+    </Setting>
+    <Setting Name="decision_reference" Type="System.String" Scope="User">
+      <Value Profile="(Default)">references\DecisionReference</Value>
+    </Setting>
+    <Setting Name="blast_reference" Type="System.String" Scope="User">
+      <Value Profile="(Default)">references\BlastReference</Value>
+    </Setting>
+    <Setting Name="all_reference" Type="System.String" Scope="User">
+      <Value Profile="(Default)">references\reference</Value>
+    </Setting>
+    <Setting Name="ncbi_reference_url" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ftp://ftp.ncbi.nlm.nih.gov/genomes/INFLUENZA/influenza.fna.gz</Value>
+    </Setting>
+    <Setting Name="gsaid_excel" Type="System.String" Scope="User">
+      <Value Profile="(Default)">data\gisaid_epiflu_uploader.xls</Value>
+    </Setting>
+    <Setting Name="work_dir" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="imm_dir" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="init_date" Type="System.DateTime" Scope="User">
+      <Value Profile="(Default)">2021-06-30</Value>
+    </Setting>
+    <Setting Name="version" Type="System.String" Scope="User">
+      <Value Profile="(Default)">r.20210115</Value>
+    </Setting>
+    <Setting Name="testmode" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="ncbi_download" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="clearsetting" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="demo_mode" Type="System.String" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

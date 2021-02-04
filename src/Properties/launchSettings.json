@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "FluGASv25": {
+      "commandName": "Project",
+      "nativeDebugging": false
+    }
+  }
+}

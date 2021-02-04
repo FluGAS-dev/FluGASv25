@@ -1,0 +1,107 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <PackageId>FluGASv2</PackageId>
+    <Platforms>AnyCPU;x64</Platforms>
+    <AssemblyName>FluGASv25</AssemblyName>
+    <StartupObject>FluGASv25.App</StartupObject>
+    <ApplicationIcon>DNAb.ico</ApplicationIcon>
+  </PropertyGroup>
+  
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Proc\Process\Reference\**" />
+    <EmbeddedResource Remove="Proc\Process\Reference\**" />
+    <None Remove="Proc\Process\Reference\**" />
+    <Page Remove="Proc\Process\Reference\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Dao\CreateSQL\CreateSequencer.txt" />
+    <None Remove="Dao\CreateSQL\CreateTableGISAID.txt" />
+    <None Remove="Dao\CreateSQL\CreateTableMinionParams.txt" />
+    <None Remove="Dao\CreateSQL\CreateTableMiseqParams.txt" />
+    <None Remove="Dao\CreateSQL\CreateTableReference.txt" />
+    <None Remove="Dao\CreateSQL\CreateTableSample.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Dao\CreateSQL\CreateSequencer.txt" />
+    <EmbeddedResource Include="Dao\CreateSQL\CreateTableGISAID.txt" />
+    <EmbeddedResource Include="Dao\CreateSQL\CreateTableMinionParams.txt" />
+    <EmbeddedResource Include="Dao\CreateSQL\CreateTableMiseqParams.txt" />
+    <EmbeddedResource Include="Dao\CreateSQL\CreateTableReference.txt" />
+    <EmbeddedResource Include="Dao\CreateSQL\CreateTableSample.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="DotNetCore.NPOI" Version="1.2.2" />
+    <PackageReference Include="LivetCask" Version="3.2.1" />
+    <PackageReference Include="LivetExtensions" Version="3.2.1" />
+    <PackageReference Include="sqlite" Version="3.13.0" />
+    <PackageReference Include="System.Data.SQLite.Core" Version="1.0.112" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Doc\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Proc\Process\MiSeq\FastQCProcess.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="WfArrangement">
+      <HintPath>..\..\WfArrangement\WfArrangement\bin\Debug\WfArrangement.dll</HintPath>
+    </Reference>
+    <Reference Include="WfComponent">
+      <HintPath>..\..\WfComponent\WfComponent\bin\Debug\WfComponent.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <SplashScreen Include="WhiteStart.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="rem mkdir $(TargetDir)data &#xD;&#xA;rem copy /y $(ProjectDir)..\Parts\data.dat $(TargetDir)data&#xD;&#xA;" />
+  </Target>
+
+</Project>

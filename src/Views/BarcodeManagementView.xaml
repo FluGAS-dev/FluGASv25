@@ -1,0 +1,146 @@
+﻿<Window x:Class="FluGASv25.Views.BarcodeManagementView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:behaviors="http://schemas.microsoft.com/xaml/behaviors"
+        xmlns:l="http://schemas.livet-mvvm.net/2011/wpf"
+        xmlns:v="clr-namespace:FluGASv25.Views"
+        xmlns:vm="clr-namespace:FluGASv25.ViewModels"
+        xmlns:local="clr-namespace:FluGASv25.Views.Behavior"
+        mc:Ignorable="d"
+        Title="MinION analysis config."
+        Name="minionbarcode"
+        Height="620" Width="600">
+    <Window.DataContext>
+        <vm:BarcodeManagementViewModel/>
+    </Window.DataContext>
+    <Window.Resources>
+        <ResourceDictionary Source="Styles.xaml" />
+    </Window.Resources>
+    <behaviors:Interaction.Triggers>
+        <!--  When ContentRendered event raised, Initialize method of ViewModel would be called.  -->
+        <behaviors:EventTrigger EventName="ContentRendered">
+            <l:LivetCallMethodAction MethodName="Initialize" MethodTarget="{Binding}" />
+        </behaviors:EventTrigger>
+
+        <!--  Dispose method is called, when Window closing.  -->
+        <behaviors:EventTrigger EventName="Closed">
+            <l:DataContextDisposeAction />
+        </behaviors:EventTrigger>
+
+        <!--  If you make user choose 'OK or Cancel' closing Window, then please use Window Close cancel Behavior.  -->
+        <l:InteractionMessageTrigger Messenger="{Binding Messenger}" MessageKey="Information">
+            <l:InformationDialogInteractionMessageAction/>
+        </l:InteractionMessageTrigger>
+        <l:InteractionMessageTrigger Messenger="{Binding Messenger}" MessageKey="Confirm">
+            <l:ConfirmationDialogInteractionMessageAction />
+        </l:InteractionMessageTrigger>
+        <l:InteractionMessageTrigger Messenger="{Binding Messenger}" MessageKey="Error">
+            <l:InformationDialogInteractionMessageAction/>
+        </l:InteractionMessageTrigger>
+        <l:InteractionMessageTrigger Messenger="{Binding Messenger}" MessageKey="Close" >
+            <l:WindowInteractionMessageAction />
+        </l:InteractionMessageTrigger>
+    </behaviors:Interaction.Triggers>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="35"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="3"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="1" 
+                Background="#eae7e7" 
+                HorizontalAlignment="Stretch" VerticalAlignment="Top">
+            　【MinION Config】<LineBreak/>
+            　　set  kit config <LineBreak/>
+            　　set  barcode -> sample-name<LineBreak/>
+        </TextBlock>
+
+        <Grid Grid.Column="1" Grid.Row="1" 
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                Margin="1,5,1,10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="4*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="3"/>
+            </Grid.ColumnDefinitions>
+            
+            <!-- Parameter name; -->
+            <GroupBox Grid.Column="1" Grid.Row="0" 
+                Background="#f9f8eb"
+                FontSize="20"
+                Margin="10,0,20,0"
+                Header="Select Config">
+                <ComboBox   HorizontalAlignment="Left" Margin="10,10,0,0"
+                    HorizontalContentAlignment="Stretch"
+                     MinWidth="280"
+                    Style="{StaticResource BaseComboBox}"
+                    FontSize="11"
+                    ToolTip="Select ont-guppy config file." 
+                    ItemsSource="{Binding ConfigList, Mode=TwoWay}" 
+                    SelectedValue="{Binding SelectedConfig, Mode=TwoWay, ValidatesOnDataErrors=True}"
+                />
+            </GroupBox>
+            <GroupBox  Grid.Column="1" Grid.Row="1" 
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Background="#f9f8eb"
+                FontSize="20"
+                Margin="10,0,20,0"
+                Header="Barcode -> sample name">
+                <!-- IsEnabled="{Binding IsBarcode}" -->
+                <Grid  >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Button Grid.Row="0" 
+                        HorizontalAlignment="Right" VerticalAlignment="Center"
+                        MinWidth="60"
+                        Margin="10,0,30,0"
+                        FontSize="12"
+                        Style="{StaticResource FlatButton}"
+                        Command="{Binding TemplateExcelCommand}"
+                        Content="TemplateExcel"/>
+
+                    <DataGrid Grid.Row="1" 
+                            Margin="10,0,3,0"
+                            AutoGenerateColumns="False"  Opacity="0.95"
+                            CanUserAddRows="False"
+                            FontFamily="Candara" FontSize="14"
+                            ItemsSource="{Binding BarcodeList}" SelectedValue="{Binding Barcode2Name, Mode=TwoWay }" >
+                        <behaviors:Interaction.Behaviors>
+                            <local:FileDropBehavior Command="{Binding AddItemsCommand}" />
+                        </behaviors:Interaction.Behaviors>
+
+                        <DataGrid.Columns  >
+                            <DataGridTextColumn MinWidth="120" Width="auto"
+                                    Header="Barcode"  FontSize="10" FontFamily="Meiryo UI"
+                                    Binding="{Binding BarcodeNum}" IsReadOnly="True"  />
+                            <DataGridTextColumn Width="auto" MinWidth="480"
+                                    Header="Name"  FontSize="12" FontFamily="Candara" FontWeight="{Binding FontWeight}" Foreground="{Binding FontColor}"
+                                    Binding="{Binding SampleName, Mode=TwoWay}" IsReadOnly="False" />
+                        </DataGrid.Columns>
+
+                     </DataGrid>
+                </Grid>
+            </GroupBox>
+            
+        </Grid>
+        <Button Grid.Column="1" Grid.Row="2" Margin="0,0,15,0"
+                Content="  Next  " HorizontalAlignment="Right"
+                Style="{StaticResource FlatButton}"
+                Command="{Binding BarcodeCommitCommand}" />
+    </Grid>
+
+</Window>
